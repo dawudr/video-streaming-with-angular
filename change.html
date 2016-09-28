@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>ngVideo</title>
+
+    <!-- Styles! -->
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="js/vendor/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- Dependencies! -->
+    <script type="text/javascript" src="js/vendor/angular/angular.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery/dist/jquery.js"></script>
+
+    <!-- ngVideo! -->
+    <script type="text/javascript" src="js/vendor/ng-video/Service.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Bootstrap.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Buffer.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Controls.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/FullScreen.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/PlaybackRate.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Playlist.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Seekable.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Screen.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Feedback.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Meta.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Messages.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Timeline.js"></script>
+    <script type="text/javascript" src="js/vendor/ng-video/Volume.js"></script>
+
+    <!-- Angular app! -->
+    <script type="text/javascript" src="js/Default.js"></script>
+    <script type="text/javascript" src="js/controllers/VideoController.js"></script>
+
+</head>
+<body ng-app="videoApp" ng-controller="VideoController">
+
+    <section class="ng-video-container">
+
+        <ul>
+            <li ng-click="playVideo('../../video/babyson.mp4')">
+                Play ../../video/babyson.mp4
+            </li>
+            <li ng-click="playVideo('../../video/babyseaside.mp4')">
+                Play ../../video/babyseaside.mp4
+            </li>
+            <li ng-click="playVideo('../../video/cyclerace.mp4')">
+                Play ../../video/cyclerace.mp4
+            </li>
+            <li ng-click="playVideo('../../video/ChristmasSpirit.mp4')">
+            Play ../../video/ChristmasSpirit.mov
+            </li>
+            <li ng-click="playVideo('http://www.w3schools.com/html/mov_bbb.mp4')">
+                Play http://www.w3schools.com/html/mov_bbb.mp4
+            </li>
+            <li ng-click="playVideo('media/Skyfall.mp4')">
+                Play media/Skyfall.mp4
+            </li>
+            <li ng-click="playVideo('media/orange_citrus_fruit_1280x720.mp4')">
+                Play media/orange_citrus_fruit_1280x720.mp4
+            </li>
+            <li ng-click="playVideo('../../video/drops.mp4')">
+            Play ../../video/drops.mp4
+            </li>
+            <li ng-click="playVideo('../../video/meerkat.mp4')">
+            Play ../../video/meerkat.mp4
+        </li>
+        </ul>
+
+        <!-- Base Directive -->
+        <section class="video" ng-video>
+
+            <!-- Screen Directive -->
+            <video vi-screen></video>
+
+        </section>
+
+    </section>
+
+</body>
+</html>

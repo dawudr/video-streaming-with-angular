@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style type="text/css">
+table.w3-table-all {
+    margin: 16px 0;
+}
+
+.w3-table-all {
+    border: 1px solid #ccc;
+
+    tr {
+      border: 1px solid #ccc;
+    }
+}
+
+table.w3-table-all tr {
+  border: 1px solid #ccc;
+}
+
+.w3-table, .w3-table-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
+
+</style>
+</head>
+<body>
+
+<h1>HTML5 Video</h1>
+<p>
+<ul>
+  <li>The controls attribute adds video controls, like play, pause, and volume.</li>
+  <li>It is a good idea to always include width and height attributes. If height and width are not set, the page might flicker while the video loads.
+  <li>The &lt;source&gt; element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format.</li>
+  <li>The text between the &lt;video&gt; and &lt;/video&gt; tags will only be displayed in browsers that do not support the &lt;video&gt; element.</li>
+  <li>To start a video automatically use the autoplay attribute.</li>
+  <li>The &lt;track&gt; tag specifies text tracks for media elements (&lt;audio&gt; and &lt;video&gt;).</li>
+</ul>
+</p>
+
+<video id="video" width="320" height="240" controls autoplay>
+  <source src="video/drops.mp4" type="video/mp4">
+  <source src="video/drops.mov" type="video/mov">
+  <track src="video/subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+  Your browser does not support the video tag.
+</video>
+
+<video id="video" width="320" height="240" controls autoplay>
+  <source src="video/meerkat.mp4" type="video/mp4">
+  <source src="video/meerkat.mov" type="video/mov">
+  <track src="video/subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+  Your browser does not support the video tag.
+</video>
+
+<video id="video" width="320" height="240" controls autoplay>
+  <source src="ngVideo/stream/media/Skyfall.mp4" type="video/mp4">
+  <track src="video/subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+  Your browser does not support the video tag.
+</video>
+
+<div style="text-align:center">
+  <button onclick="playPause()">Play/Pause</button>
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+</div>
+
+
+<h1>HTML Plug-ins</h1>
+<p>
+  The &lt;object&gt; element is supported by all browsers.The &lt;object&gt; element defines an embedded object within an HTML document. It is used to embed plug-ins (like Java applets, PDF readers, Flash Players) in web pages.
+</p>
+
+<object width="100%" height="400px" data="videotheory.html"></object>
+<p>The &lt;embed&gt; element is supported in all major browsers. The &lt;embed&gt; element also defines an embedded object within an HTML document. Web browsers have supported the &lt;embed&gt; element for a long time. However, it has not been a part of the HTML specification before HTML5.</p>
+
+<embed width="400px" height="100px" src="video/drop.jpg">
+
+<h1>HTML YouTube Videos</h1>
+<p>
+  Converting videos to different formats can be difficult and time-consuming. An easier solution is to let YouTube play the videos in your web page.
+  YouTube will display an id (like XGSy3_Czz8k), when you save (or play) a video. You can use this id, and refer to your video in the HTML code.
+</p>
+<h2>Playing a YouTube Video in HTML</h2>
+<ul>
+ <li>Upload the video to YouTube</li>
+ <li>Take a note of the video id</li>
+ <li>Define an &lt;iframe&gt; element in your web page</li>
+ <li>Let the src attribute point to the video URL</li>
+ <li>Use the width and height attributes to specify the dimension of the player</li>
+ <li>Add any other parameters to the URL (see below)</li>
+</ul>
+<p>
+  <ul>
+    <li>
+      ?autoplay=x
+      Value 0 (default): The video will not play automatically when the player loads.<br/>
+      Value 1: The video will play automatically when the player loads.
+    </li>
+    <li>
+      YouTube Playlist - A comma separated list of videos to play (in addition to the original URL).
+    </li>
+    <li>
+      YouTube Loop - Value 0 (default): The video will play only once.<br/>
+      Value 1: The video will loop (forever).
+    </li>
+    <li>
+      YouTube Controls - Value 0: Player controls does not display.<br />
+      Value 1 (default): Player controls display.
+    </li>
+  </ul>
+</p>
+
+<iframe width="420" height="345" src="https://www.youtube.com/embed/XGSy3_Czz8k">
+</iframe>
+
+
+<script>
+var myVideo = document.getElementById("video");
+
+function playPause() {
+    if (myVideo.paused)
+        myVideo.play();
+    else
+        myVideo.pause();
+}
+
+function makeBig() {
+    myVideo.width = 560;
+}
+
+function makeSmall() {
+    myVideo.width = 320;
+}
+
+function makeNormal() {
+    myVideo.width = 420;
+}
+</script>
+
+</body>
+</html>

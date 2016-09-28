@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style type="text/css">
+table.w3-table-all {
+    margin: 16px 0;
+}
+
+.w3-table-all {
+    border: 1px solid #ccc;
+
+    tr {
+      border: 1px solid #ccc;
+    }
+}
+
+table.w3-table-all tr {
+  border: 1px solid #ccc;
+}
+
+.w3-table, .w3-table-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+}
+
+</style>
+</head>
+<body>
+  
+<h1>Common Video Formats</h1>
+
+<table>
+<tbody><tr>
+<td style="width:225px"><img alt="Videoformats" width="196" height="109" src="img/pic_video.jpg"></td>
+<td style="vertical-align:top">MP4 is the new and upcoming format for internet video.<br>
+<br>MP4 is recommended by YouTube.<br><br>MP4 is supported by Flash Players.<br>
+<br>MP4 is supported by HTML5.
+<br>
+</td>
+</tr>
+</tbody></table>
+
+<table class="w3-table-all notranslate">
+<tbody><tr>
+<th>Format</th>
+<th style="width:50px">File</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>MPEG</td>
+<td>.mpg<br>.mpeg</td>
+<td>
+MPEG.
+Developed by
+the Moving Pictures Expert Group. The first popular video format on
+the web. Used to be supported by all browsers, but it is
+not supported in HTML5 (See MP4). </td>
+</tr>
+
+
+
+<tr>
+<td>AVI</td>
+<td>.avi</td>
+<td>
+AVI (Audio Video Interleave). Developed by Microsoft. Commonly used in video cameras and TV
+hardware. Plays well on Windows computers, but not in web browsers.</td>
+</tr>
+<tr>
+<td>WMV</td>
+<td>.wmv</td>
+<td>
+WMV (Windows Media Video). Developed by Microsoft. Commonly used in
+video cameras and TV hardware. Plays well on Windows computers, but not in
+web browsers.</td>
+</tr>
+<tr>
+<td>QuickTime</td>
+<td>.mov</td>
+<td>
+QuickTime. Developed by Apple. Commonly used in video cameras and TV hardware.
+Plays well on Apple computers, but not in web browsers. (See MP4)</td>
+</tr>
+<tr>
+<td>RealVideo</td>
+<td>.rm<br>.ram</td>
+<td>
+RealVideo. Developed by Real Media to allow video streaming with low
+bandwidths. It is still used for online video and Internet TV, but does not play
+in web browsers.</td>
+</tr>
+<tr>
+<td>Flash</td>
+<td>.swf<br>.flv</td>
+<td>
+Flash. Developed by Macromedia. Often requires an extra component (plug-in) to play in
+web browsers.</td>
+</tr>
+<tr>
+<td>Ogg</td>
+<td>.ogg</td>
+<td>
+Theora Ogg. Developed by the Xiph.Org Foundation. Supported by HTML5.</td>
+</tr>
+<tr>
+<td>WebM</td>
+<td>.webm</td>
+<td>
+WebM.
+Developed by the web giants, Mozilla, Opera, Adobe, and Google. Supported by
+HTML5.</td>
+</tr>
+<tr>
+<td>MPEG-4<br>or MP4</td>
+<td>.mp4</td>
+<td>
+MP4.
+Developed by
+the Moving Pictures Expert Group. Based on QuickTime. Commonly used in newer video cameras and TV hardware.
+Supported by all HTML5 browsers. Recommended by YouTube.&nbsp;
+</td>
+</tr>
+</tbody></table>
+
+
+<h1>HTML Video - Browser Support</h1>
+
+<table class="w3-table-all notranslate" id="table2">
+<tbody><tr>
+<th style="width:25%">Browser</th>
+<th style="width:25%">MP4</th>
+<th style="width:25%">WebM</th>
+<th style="width:25%">Ogg</th>
+</tr>
+<tr>
+<td>Internet Explorer</td>
+<td>YES</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>YES<br>from Firefox 21<br>from Firefox 30 for Linux</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>YES</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>YES<br>From Opera 25 </td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+</tbody></table>
+
+
+<h1>MIME Types for Video Formats</h1>
+
+<table class="w3-table-all notranslate" id="table1">
+<tbody><tr>
+<th style="width:50%">File Format</th>
+<th style="width:50%">Media Type</th>
+</tr>
+<tr>
+<td>MP4</td>
+<td>video/mp4</td>
+</tr>
+<tr>
+<td>WebM</td>
+<td>video/webm</td>
+</tr>
+<tr>
+<td>Ogg</td>
+<td>video/ogg</td>
+</tr>
+</tbody></table>
+
+<script>
+var myVideo = document.getElementById("video");
+
+function playPause() {
+    if (myVideo.paused)
+        myVideo.play();
+    else
+        myVideo.pause();
+}
+
+function makeBig() {
+    myVideo.width = 560;
+}
+
+function makeSmall() {
+    myVideo.width = 320;
+}
+
+function makeNormal() {
+    myVideo.width = 420;
+}
+</script>
+
+</body>
+</html>
